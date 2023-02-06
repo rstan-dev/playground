@@ -17,6 +17,62 @@ body {
     justify-content: center;
     height: 100vh;
     /* takes up 100% of the viewport height  */
-    overflow: hidden;
-    /* prevents scroll bard from showing by default  */
+
+}
+
+#h1-todo {
+    margin-top: 200px;
+}
+
+.project-break-line {
+    border-top: 1px solid black;
+    width: 80%;
+    margin: 50px 0 20px 0;
+}
+
+
+/* To Do Styling  */
+
+#todo-form {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    width: 400px;
+    background-color: #bdbcbc;
+}
+
+.todo-input {
+    border: none;
+    color: #444;
+    font-size: 2rem;
+    padding: 1rem 2 rem;
+    display: block;
+    width: 100%;
+}
+
+.todo-input::placeholder {
+    color: #cfcfcf;
+}
+
+.todos {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: black;
+    font-weight: bold;
+}
+
+.todos li {
+    border-top: 1px solid white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+}
+
+.todos li.completed {
+    color: green;
+    text-decoration: line-through;
+}
+
+small {
+    margin-top: 30px;
 }
