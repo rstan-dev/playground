@@ -1,0 +1,22 @@
+/* Standard setup for most projects  */
+* {
+    box-sizing: border-box;
+    /* removes any extra width - allows for accurate padding */
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    /* aligns content */
+    flex-direction: column;
+    /* stacks content  */
+    align-items: center;
+    /* centers content */
+    justify-content: center;
+    height: 100vh;
+    /* takes up 100% of the viewport height  */
+    overflow: hidden;
+    /* prevents scroll bard from showing by default  */
+}
