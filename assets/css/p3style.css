@@ -34,8 +34,14 @@ body {
 }
 
 .p3-draggable {
-    padding: 1 rem;
+    padding: 2rem;
     background-color: #ffffff;
     width: 500px;
     border: 1px solid black;
+    cursor: move;
+}
+
+.p3-draggable.dragging {
+    opacity: 0.5;
+
 }
