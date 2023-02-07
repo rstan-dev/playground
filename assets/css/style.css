@@ -34,14 +34,14 @@ body {
 }
 
 /* To Do List Styling  */
-#todo-form {
+#form {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     max-width: 100%;
     width: 400px;
     background-color: #bdbcbc;
 }
 
-.todo-input {
+.input {
     border: none;
     color: #444;
     font-size: 2rem;
@@ -50,7 +50,7 @@ body {
     width: 100%;
 }
 
-.todo-input::placeholder {
+.input::placeholder {
     color: #cfcfcf;
 }
 
@@ -74,69 +74,6 @@ body {
     text-decoration: line-through;
 }
 
-.todos li div.list-buttons {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    width: max-content;
-    float: right;
-}
-
 small {
     margin-top: 30px;
-}
-
-/* ----Sortable List functionality ---*/
-
-:root {
-    --border-color: #e3e5e4;
-    --background-color: #c3c7ca;
-    --text-color: #34444f;
-
-}
-
-.draggable-list {
-    border: 1px solid var(--border-color);
-    background-color: var(--background-color);
-    color: var(--text-color);
-    padding: 0;
-    list-style-type: none;
-}
-
-.draggable-list li {
-    background-color: white;
-    display: flex;
-    flex: 1;
-    /* If an element has flex: 1, it signifies that the width of all other elements will be the same as their content, but the element with flex: 1 will be given the remaining full space.  */
-}
-
-.draggable-list li:not(:last-of-type) {
-    border-bottom: 1px solid var(--border-color);
-}
-
-.draggable-list .number {
-    background-color: var(--background-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    height: 60px;
-    width: 60px;
-}
-
-.draggable-list li.over .draggable {
-    background-color: #eaeaea;
-}
-
-.draggable-list .person-name {
-    margin: 0 20px 0 0;
-}
-
-.draggable {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px;
-    flex: 1;
 }

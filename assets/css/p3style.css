@@ -1,0 +1,41 @@
+/* Standard setup for most projects  */
+* {
+    box-sizing: border-box;
+    /* removes any extra width - allows for accurate padding */
+}
+
+header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    /* aligns content */
+    flex-direction: column;
+    /* stacks content  */
+    align-items: center;
+    /* centers content */
+    justify-content: center;
+}
+
+
+
+/* -- P3 draggable list --*/
+.p3-container {
+    background-color: #34444f;
+    padding: 1rem;
+    margin-top: 1rem;
+    width: 600px;
+}
+
+.p3-draggable {
+    padding: 1 rem;
+    background-color: #ffffff;
+    width: 500px;
+    border: 1px solid black;
+}

@@ -1,0 +1,80 @@
+/* Standard setup for most projects  */
+* {
+    box-sizing: border-box;
+    /* removes any extra width - allows for accurate padding */
+}
+
+header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    /* aligns content */
+    flex-direction: column;
+    /* stacks content  */
+    align-items: center;
+    /* centers content */
+    justify-content: center;
+}
+
+
+/* ----Sortable List functionality ---*/
+
+:root {
+    --border-color: #e3e5e4;
+    --background-color: #c3c7ca;
+    --text-color: #34444f;
+
+}
+
+.draggable-list {
+    border: 1px solid var(--border-color);
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 0;
+    list-style-type: none;
+}
+
+.draggable-list li {
+    background-color: white;
+    display: flex;
+    flex: 1;
+    /* If an element has flex: 1, it signifies that the width of all other elements will be the same as their content, but the element with flex: 1 will be given the remaining full space.  */
+}
+
+.draggable-list li:not(:last-of-type) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.draggable-list .number {
+    background-color: var(--background-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    height: 60px;
+    width: 60px;
+}
+
+.draggable-list li.over .draggable {
+    background-color: #eaeaea;
+}
+
+.draggable-list .person-name {
+    margin: 0 20px 0 0;
+}
+
+.draggable {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    flex: 1;
+}
