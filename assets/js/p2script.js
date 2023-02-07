@@ -1,5 +1,6 @@
 //-----------------------------------------------------
 // P2: Draggable List functionality
+// from https://github.com/rstan-dev/vanillawebprojects/tree/master/sortable-list
 const draggable_list = document.getElementById('draggable-list');
 
 const richestPeople = [

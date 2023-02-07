@@ -22,19 +22,17 @@ containers.forEach(container => {
         const afterElement = getDragAfterElement(container, e.clientY);
         console.log(afterElement);
         const draggable = document.querySelector('.dragging');
-        container.appendChild(draggable);
+        if (afterElement == null) {
+            container.appendChild(draggable)
+        } else {
+            container.insertBefore(draggable, afterElement)
+        };
     });
 });
 
 
-
-// const afterElement = getDragAfterElement(container, e.clientY)
-// 
-// 
-
-
 function getDragAfterElement(container, y) {
-    const draggableElements = [...container.querySelectorAll('.p3-draggable:not(.dragging)')]
+    const draggableElements = [...container.querySelectorAll('.p3-draggable:not(.dragging)')];
 
     return draggableElements.reduce((closest, child) => {
         const box = child.getBoundingClientRect();
@@ -45,25 +43,12 @@ function getDragAfterElement(container, y) {
             return {
                 offset: offset,
                 element: child
-            }
+            };
         } else {
-            return closest
+            return closest;
         }
 
     }, {
         offset: Number.NEGATIVE_INFINITY
-    }).element
-}
-
-//     
-
-//     
-//         const box = child.getBoundingClientRect()
-//         const offset = y - box.top - box.height / 2
-//         console.log(offset)
-
-//     }, 
-//     })
-// }
-
-// https://www.youtube.com/watch?v=jfYWwQrtzzY got to 21:03 - head is fried!!!
+    }).element;
+};

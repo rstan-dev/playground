@@ -1,4 +1,5 @@
 // P1: To Do app functionality
+// from: https://github.com/rstan-dev/50projects50days/tree/master/todo-list 
 
 const form = document.getElementById('form')
 const input = document.getElementById('input')
