@@ -1,8 +1,18 @@
 //from Udemy course: https:www.udemy.com/course/html-css-javascript-projects-for-beginners/learn/lecture/34705910#overview
 
+//toggling 2 icons - https://stackoverflow.com/questions/46625249/toggling-innerhtml-in-javascript
+
 const formEl = document.querySelector(".form");
 const inputEl = document.querySelector(".input");
 const ulEl = document.querySelector(".list");
+
+// let list = JSON.parse(localStorage.getItem("list"));
+// console.log(list);
+
+// list.forEach(task => {
+//     toDoList(task)
+
+// });
 
 
 
@@ -18,6 +28,10 @@ formEl.addEventListener("submit", (event) => {
 
 function toDoList() {
     let newTask = inputEl.value;
+
+    // if (task) {
+    //     newTask = task.name;
+    // }
 
     const liEl = document.createElement("li");
 
@@ -57,6 +71,24 @@ function toDoList() {
         liEl.remove();
     });
 
+    updateLocalStorage()
+
 }
 
 //______________________________________________________
+
+function updateLocalStorage() {
+    const liEls = document.querySelectorAll("li");
+    list = [];
+
+    liEls.forEach(liEl => {
+        list.push({
+            name: liEl.innerText,
+            checked: liEl.classList.contains("checked")
+        });
+    });
+
+    localStorage.setItem("list", JSON.stringify(list))
+
+
+}
