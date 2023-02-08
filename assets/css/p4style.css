@@ -71,11 +71,6 @@ form {
     position: relative;
 }
 
-.todos li.completed {
-    color: green;
-    text-decoration: line-through;
-}
-
 .list li .fa-trash-can {
     color: red;
     position: absolute;
@@ -96,6 +91,11 @@ form {
     cursor: pointer;
 }
 
+.list li.checked {
+    color: rgb(156, 156, 156);
+    text-decoration: line-through;
+}
+
 .list li .fa-square {
     position: absolute;
     right: 40px;
@@ -105,14 +105,9 @@ form {
     cursor: pointer;
 }
 
-.list li.checked {
-    color: rgb(156, 156, 156);
-    text-decoration: line-through;
-}
 
-.list li.unchecked .fa-square-check {
-    opacity: 0;
-}
+
+
 
 
 /* got to: 11:02 - https://www.udemy.com/course/html-css-javascript-projects-for-beginners/learn/lecture/34705906#overview
