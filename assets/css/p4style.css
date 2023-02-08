@@ -66,14 +66,53 @@ form {
 
 .list li {
     border-top: 1px solid white;
-    cursor: pointer;
     font-size: 1.5rem;
     padding: 1rem 2rem;
+    position: relative;
 }
 
 .todos li.completed {
     color: green;
     text-decoration: line-through;
 }
+
+.list li .fa-trash-can {
+    color: red;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* top 50% brings the top of the icon to halfway  translateY brings it to excatly halfway up (not sure why this was needed?)  it seemed to work without it */
+    cursor: pointer;
+}
+
+.list li .fa-square-check {
+    color: green;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* top 50% brings the top of the icon to halfway  translateY brings it to excatly halfway up (not sure why this was needed?)  it seemed to work without it */
+    cursor: pointer;
+}
+
+.list li .fa-square {
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* top 50% brings the top of the icon to halfway  translateY brings it to excatly halfway up (not sure why this was needed?)  it seemed to work without it */
+    cursor: pointer;
+}
+
+.list li.checked {
+    color: rgb(156, 156, 156);
+    text-decoration: line-through;
+}
+
+.list li.unchecked .fa-square-check {
+    opacity: 0;
+}
+
 
 /* got to: 11:02 - https://www.udemy.com/course/html-css-javascript-projects-for-beginners/learn/lecture/34705906#overview
