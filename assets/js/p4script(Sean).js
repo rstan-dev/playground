@@ -95,7 +95,7 @@ function listItem(task) {
 }
 
 /////////////////////////
-// Local Storage Functions - responsible for interacting with local storage
+// Local Storage Functions - utility functions responsible for interacting with local storage
 /////////////////////////
 
 // get list items from local storage
