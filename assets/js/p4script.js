@@ -1,18 +1,16 @@
 //from Udemy course: https:www.udemy.com/course/html-css-javascript-projects-for-beginners/learn/lecture/34705910#overview
-
 //toggling 2 icons - https://stackoverflow.com/questions/46625249/toggling-innerhtml-in-javascript
 
 const formEl = document.querySelector(".form");
 const inputEl = document.querySelector(".input");
 const ulEl = document.querySelector(".list");
 
-// let list = JSON.parse(localStorage.getItem("list"));
-// console.log(list);
+let list = JSON.parse(localStorage.getItem("list"));
+console.log(list);
 
-// list.forEach(task => {
-//     toDoList(task)
-
-// });
+list.forEach(task => {
+    toDoList(task);
+})
 
 
 
@@ -26,14 +24,19 @@ formEl.addEventListener("submit", (event) => {
 
 })
 
-function toDoList() {
+function toDoList(task) {
     let newTask = inputEl.value;
 
-    // if (task) {
-    //     newTask = task.name;
-    // }
+    if (task) {
+        newTask = task.name
+    }
 
     const liEl = document.createElement("li");
+
+    if (task && task.checked) {
+        liEl.classList.add("checked");
+    };
+
 
     liEl.innerText = newTask;
 
@@ -54,6 +57,7 @@ function toDoList() {
 
     checkBtnEl.addEventListener("click", () => {
         liEl.classList.toggle("checked");
+        updateLocalStorage();
 
         if (liEl.className === "checked") {
             checkBtnEl.innerHTML = `
@@ -69,9 +73,10 @@ function toDoList() {
 
     trashBtnEl.addEventListener("click", () => {
         liEl.remove();
+        updateLocalStorage();
     });
 
-    updateLocalStorage()
+    updateLocalStorage();
 
 }
 
