@@ -5,7 +5,7 @@ const formEl = document.querySelector(".form");
 const inputEl = document.querySelector(".input");
 const ulEl = document.querySelector(".list");
 
-const onPageLoad = renderList(getLocalStorage());
+const onPageLoad = () => renderList(getLocalStorage());
 onPageLoad();
 
 /////////////////////////
@@ -67,7 +67,7 @@ function listItem(task) {
   const checkBtnEl = document.createElement("div");
 
   task.checked
-    ? (checkBtnEl.innerHTML = `<i class="fa-solid fa-check-square"></i>`)
+    ? (checkBtnEl.innerHTML = `<i class="fa-regular fa-solid fa-check-square"></i>`)
     : (checkBtnEl.innerHTML = `<i class="fa-regular fa-square"></i>`);
 
   liEl.appendChild(checkBtnEl);
@@ -83,7 +83,7 @@ function listItem(task) {
       checkBtnEl.innerHTML = `<i class="fa-regular fa-square"></i>`;
     } else {
       task.checked = true;
-      checkBtnEl.innerHTML = `<i class=fa-sharp fa-solid fa-square-check"></i>`;
+      checkBtnEl.innerHTML = `<i class="fa-regular fa-solid fa-check-square"></i>`;
     }
     updateListItemById(task.id, task);
   });
