@@ -66,9 +66,9 @@ function listItem(task) {
 
   const checkBtnEl = document.createElement("div");
 
-  task.checked
-    ? (checkBtnEl.innerHTML = `<i class="fa-sharp fa-solid fa-square-check"></i>`)
-    : (checkBtnEl.innerHTML = `<i class="fa-regular fa-square"></i>`);
+  task.checked ?
+    (checkBtnEl.innerHTML = `<i class="fa-sharp fa-solid fa-square-check"></i>`) && (liEl.classList.add("checked")) :
+    (checkBtnEl.innerHTML = `<i class="fa-regular fa-square"></i>`);
 
   liEl.appendChild(checkBtnEl);
 
@@ -100,9 +100,8 @@ function listItem(task) {
 
 // get list items from local storage
 function getLocalStorage() {
-  return localStorage.getItem("list")
-    ? JSON.parse(localStorage.getItem("list"))
-    : [];
+  return localStorage.getItem("list") ?
+    JSON.parse(localStorage.getItem("list")) : [];
 }
 
 // get list item from local storage by id
@@ -144,3 +143,35 @@ function updateListItemById(id, updatedItem) {
 function clearInput() {
   inputEl.value = "";
 }
+
+//////////////////
+//Update Counter function
+//////////////////
+
+function updateCounter() {
+
+}
+
+
+/*
+function updateSelectedCount() {
+  const selectedSeats = document.querySelectorAll('.row .seat.selected');
+
+  const seatsIndex = [...selectedSeats].map(function (seat) {
+      return [...seats].indexOf(seat);
+  }); //this function gets the indexed seats from the node list and capturs in an array
+
+  // console.log(seatsIndex);  shows the index of each selected seat working in the console
+
+  localStorage.setItem('selectedSeats', JSON.stringify(seatsIndex));
+  // stores this data in the application window even when browser is refreshed
+
+  const selectedSeatsCount = selectedSeats.length;
+  // console.log(selectedSeatsCount); - shows the selection count is working in the console
+  count.innerText = selectedSeatsCount;
+  total.innerText = selectedSeatsCount * ticketPrice
+  // updates the HTML text for count and total to reflect on screen
+
+};
+
+*/
