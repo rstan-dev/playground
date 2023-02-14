@@ -78,6 +78,16 @@ function swapItems(fromIndex, toIndex) {
 
 }
 
+function dropItems(fromIndex) {
+    const itemOne = listItems[fromIndex].querySelector('.draggable');
+
+
+    listItems[fromIndex].appendChild(itemTwo);
+
+
+}
+
+
 
 function dragLeave() {
     // console.log('Event:', 'dragleave');

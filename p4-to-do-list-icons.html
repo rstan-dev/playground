@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;600&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/cb51976b49.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Sortable/1.15.0/Sortable.min.js"
+        integrity="sha512-Eezs+g9Lq4TCCq0wae01s9PuNWzHYoCMkE97e2qdkYthpI0pzC3UGB03lgEHn2XM85hDOUF6qgqqszs+iXU4UA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Random Javascript Projects</title>
 </head>
 <header>
@@ -27,7 +30,7 @@
 
         <ul class="list" id="list">
 
-            <!-- <li class="checked checked">Test from HTML
+            <!-- <li class="checked">how much text can we actually fit before wrapping
                 <div>
                     <i class="fa-regular fa-square"></i>
                     <i class="fa-sharp fa-solid fa-square-check"></i>
@@ -35,8 +38,13 @@
                 <div>
                     <i class="fa-solid fa-trash-can"></i>
                 </div>
+                <div>
+                    <i class="fas fa-bars"></i>
+                </div>
 
             </li> -->
+
+
 
         </ul>
     </form>
@@ -47,6 +55,12 @@
     </div>
 
     <script src="assets/js/p4script.js"></script>
+    <script>
+        const dragArea = document.querySelector(".list");
+        new Sortable(dragArea, {
+            animation: 350
+        });
+    </script>
 
 </body>
 

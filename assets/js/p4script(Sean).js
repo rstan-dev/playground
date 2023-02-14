@@ -144,13 +144,16 @@ function clearInput() {
   inputEl.value = "";
 }
 
+
+
+
 //////////////////
 //Update Counter function
 //////////////////
 
-function updateCounter() {
+// function updateCounter() {
 
-}
+// }
 
 
 /*

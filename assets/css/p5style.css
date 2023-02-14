@@ -1,0 +1,56 @@
+/* Standard setup for most projects  */
+* {
+    box-sizing: border-box;
+    /* removes any extra width - allows for accurate padding */
+}
+
+header {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    display: flex;
+    /* aligns content */
+    flex-direction: column;
+    /* stacks content  */
+    align-items: center;
+    /* centers content */
+    justify-content: center;
+    background: rgb(54, 52, 109);
+    min-height: 100vh;
+}
+
+.wrapper {
+    background: white;
+    padding: 25px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.wrapper .item {
+    background: rgb(54, 52, 109);
+    display: flex;
+    padding: 12px 17px;
+    color: white;
+    margin-bottom: 8px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+
+}
+
+.wrapper .item .text {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.wrapper .item i {
+    font-size: 18px;
+    cursor: pointer;
+}

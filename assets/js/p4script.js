@@ -39,6 +39,10 @@ function toDoList(task) {
   trashBtnEl.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
   liEl.appendChild(trashBtnEl);
 
+  const barsEl = document.createElement("div");
+  barsEl.innerHTML = `<i class="fas fa-bars"></i>`;
+  liEl.appendChild(barsEl);
+
   checkBtnEl.addEventListener("click", () => {
     liEl.classList.toggle("checked");
     updateLocalStorage();
@@ -118,7 +122,9 @@ function updateTickCounter() {
 
 
 /////////////////////
-// Update 5 Complete Counter
+// Update % Complete Counter
+// support from: https://www.w3schools.com/jsref/jsref_round.asp
+// stackoverflow: https://stackoverflow.com/questions/8093625/localstorage-count-how-many-values-in-key-when-using-stringify
 /////////////////////
 
 function calculatePercentage() {
@@ -132,7 +138,7 @@ function calculatePercentage() {
   function countValue(value, dataArray, key) {
     return dataArray.reduce(function (count, item) {
       return count + (item[key] === value);
-    }, 0);
+    }, 0); //chatGPT answer
   }
 
   let countTicks = countValue(true, dataArray, "checked");
@@ -146,8 +152,51 @@ function calculatePercentage() {
 
 }
 
+/////////////////////
+//  Draggable code
+/////////////////////
+// const item = document.querySelector('.draggable');
 
+// let isDragging = false;
+// let currentX;
+// let currentY;
+// let initialX;
+// let initialY;
+// let xOffset = 0;
+// let yOffset = 0;
 
+// item.addEventListener("mousedown", dragStart);
+// item.addEventListener("mouseup", dragEnd);
+// item.addEventListener("mouseout", dragEnd);
+// item.addEventListener("mousemove", drag);
+
+// function dragStart(e) {
+//   initialX = e.clientX - xOffset;
+//   initialY = e.clientY - yOffset;
+
+//   isDragging = true;
+// }
+
+// function dragEnd(e) {
+//   isDragging = false;
+// }
+
+// function drag(e) {
+//   if (isDragging) {
+//     e.preventDefault();
+//     currentX = e.clientX - initialX;
+//     currentY = e.clientY - initialY;
+
+//     xOffset = currentX;
+//     yOffset = currentY;
+
+//     setTranslate(currentX, currentY, item);
+//   }
+// }
+
+// function setTranslate(xPos, yPos, el) {
+//   el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+// }
 
 
 // function countTrue(dataArray) {
